@@ -1,5 +1,8 @@
 package com.udemy.hibernatedemocode;
 
+import java.text.ParseException;
+import java.util.Date;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -23,7 +26,9 @@ public class CreateStudentDemo {
 			// use the session object to save java object
 			System.out.println("Creating new student object...");
 			// create a student object
-			Student tempStudent = new Student("Alice","Cooper","coopera1@gmail.com");
+			String theDateOfBirthStr = "21/12/1994";
+			Date theDateOfBirth = DateUtils.parseDate(theDateOfBirthStr);
+			Student tempStudent = new Student("Forsythe","Jones","jonesf1@gmail.com",theDateOfBirth);
 			// start a transaction			
 			session.beginTransaction();
 			// save the student object
@@ -34,6 +39,8 @@ public class CreateStudentDemo {
 			
 			System.out.println("Done!");
 			
+		} catch (ParseException e) {
+			e.printStackTrace();
 		}finally {
 			factory.close();
 		}
