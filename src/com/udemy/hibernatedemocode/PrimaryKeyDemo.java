@@ -24,18 +24,18 @@ public class PrimaryKeyDemo {
 					// use the session object to save java object
 					System.out.println("Creating new student object...");
 					// create 3 student objects
-					Student tempStudent1 = new Student("Archie","Andrews","andrewsa1@gmail.com");
-					Student tempStudent2 = new Student("Betty","Cooper","cooperb1@gmail.com");
-					Student tempStudent3 = new Student("Forsythe","Jones","jonesf1@gmail.com");
-					Student tempStudent4 = new Student("Veronica","lodge","lodgev1@gmail.com");
+//					Student tempStudent1 = new Student("Archie","Andrews","andrewsa1@gmail.com");
+//					Student tempStudent2 = new Student("Betty","Cooper","cooperb1@gmail.com");
+//					Student tempStudent3 = new Student("Forsythe","Jones","jonesf1@gmail.com");
+//					Student tempStudent4 = new Student("Veronica","lodge","lodgev1@gmail.com");
 					// start a transaction			
 					session.beginTransaction();
 					// save the student object
 					System.out.println("Saving the student...");
-					session.save(tempStudent1);
-					session.save(tempStudent2);
-					session.save(tempStudent3);
-					session.save(tempStudent4);
+//					session.save(tempStudent1);
+//					session.save(tempStudent2);
+//					session.save(tempStudent3);
+//					session.save(tempStudent4);
 					// commit transaction
 					session.getTransaction().commit();
 					
